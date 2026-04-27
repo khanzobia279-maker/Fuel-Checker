@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Inter:wght@400;600&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+  background: #07091a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  gap: 20px;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2rem;
+  color: #3b82f6;
+}
+
+.container {
+  background: #0d1225;
+  border: 1px solid rgba(59, 130, 246, 0.25);
+  border-radius: 16px;
+  width: 100%;
+  max-width: 420px;
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+#fuelInput {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(59, 130, 246, 0.25);
+  background: #060a18;
+  color: #dde8ff;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  outline: none;
+}
+
+#fuelInput:focus {
+  border-color: #3b82f6;
+}
+
+#fuelInput::placeholder {
+  color: #5d7aaa;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: #2563eb;
+  color: #fff;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+#message {
+  display: none;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(59, 130, 246, 0.20);
+  background: rgba(37, 99, 235, 0.08);
+  color: #dde8ff;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  text-align: center;
+}
+
+#message:not(:empty) {
+  display: block;
+}
+
+@media (max-width: 480px) {
+  h1 { font-size: 1.4rem; }
+  .container { padding: 24px 18px; }
+}
+
+@media (max-width: 360px) {
+  h1 { font-size: 1.2rem; }
+  .container { padding: 20px 14px; }
+  #fuelInput, button, #message { font-size: 0.9rem; }
+}
